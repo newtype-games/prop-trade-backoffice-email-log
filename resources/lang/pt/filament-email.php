@@ -29,6 +29,4 @@ return [
     'download_attachment_error' => 'Não foi possível baixar o anexo!',
     'add_attachments' => 'Adicionar anexos',
     'attachments_number' => ':count anexo|:count anexos',
-    'previous' => 'Próximo',
-    'next' => 'Anterior',
 ];

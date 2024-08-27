@@ -29,6 +29,4 @@ return [
     'download_attachment_error' => 'Unable to download attachment!',
     'add_attachments' => 'Add attachments',
     'attachments_number' => ':count attachment|:count attachments',
-    'previous' => 'Previous',
-    'next' => 'Next',
 ];
