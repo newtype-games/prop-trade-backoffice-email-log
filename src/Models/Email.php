@@ -52,13 +52,13 @@ class Email extends Model
 
     protected static function booted(): void
     {
-        static::addGlobalScope('teams', function (Builder $query) {
-            if (auth()->check() && Filament::getTenant()) {
-                $query->whereBelongsTo(auth()->user()?->teams);
-            } else {
-                $query->whereTeamId(null);
-            }
-        });
+        // static::addGlobalScope('teams', function (Builder $query) {
+        //     if (auth()->check() && Filament::getTenant()) {
+        //         $query->whereBelongsTo(auth()->user()?->teams);
+        //     } else {
+        //         $query->whereTeamId(null);
+        //     }
+        // });
     }
 
     public static function boot()
