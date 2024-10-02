@@ -56,10 +56,10 @@ class FilamentEmailLogger
         } else {
             $savePathRaw = null;
         }
-        $propAccountId = array_key_exists('mailData', $event->data) ? $event->data['mailData']['prop_account'] : null;
+        $propAccountId = array_key_exists('mailData', $event->data) ? $event->data['mailData']['prop_account'] : ($event->data['email'] ? $event->data['email']['prop_account_id'] : null);
         $model::create([
-            // 'team_id' => Filament::getTenant()?->id ?? null,
-            'team_id' => $propAccountId,
+            'team_id' => Filament::getTenant()?->id ?? null,
+            'prop_account_id' => $propAccountId,
             'from' => $this->recipientsToString($email->getFrom()),
             'to' => $this->recipientsToString($email->getTo()),
             'cc' => $this->recipientsToString($email->getCc()),

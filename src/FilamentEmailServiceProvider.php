@@ -28,6 +28,7 @@ class FilamentEmailServiceProvider extends PackageServiceProvider
                 'create_filament_email_table',
                 'add_attachments_field_to_filament_email_log_table',
                 'add_team_id_field_to_filament_email_log_table',
+                'add_prop_account_id_field_to_filament_email_log_table',
             ]);
 
         $this->app->register(EmailMessageServiceProvider::class);
